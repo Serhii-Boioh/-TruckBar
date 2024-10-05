@@ -1681,21 +1681,21 @@ html {
   transform: translate(-50%, -50%); /* Центрування модального вікна */
   padding: 30px; /* Збільшення відступів */
   border-radius: 20px; /* Заокруглені кути */
-  width: 80%;
-  max-width: 800px;
-  max-height: 80vh; /* Обмежуємо висоту вікна */
+  width: 90%; /* Змінено на 90%, щоб бути більш адаптивним */
+  max-width: 800px; /* Максимальна ширина */
+  max-height: 90vh; /* Обмежуємо висоту вікна */
   overflow-y: auto; /* Вмикаємо вертикальну прокрутку, якщо контент більший за контейнер */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Тінь для модального вікна */
 }
 
 .modal-content h1 {
-  font-size: 3rem; /* Збільшити розмір заголовка */
+  font-size: 2.5rem; /* Зменшено для адаптивності */
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 .modal-content p {
-  font-size: 1.8rem; /* Збільшити текст */
+  font-size: 1.5rem; /* Зменшено для адаптивності */
   line-height: 1.6;
 }
 
@@ -1713,6 +1713,22 @@ html {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* Додати адаптивність для менших екранів */
+@media (max-width: 600px) {
+  .modal-content h1 {
+    font-size: 2rem; /* Зменшити заголовок на менших екранах */
+  }
+
+  .modal-content p {
+    font-size: 1.2rem; /* Зменшити текст на менших екранах */
+  }
+
+  .close {
+    font-size: 24px; /* Зменшити розмір кнопки закриття на менших екранах */
+  }
+}
+
 
 
 
